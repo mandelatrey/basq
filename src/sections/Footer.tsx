@@ -2,9 +2,9 @@ import Image from "next/image";
 import logoImage from "@/assets/images/logo.svg";
 
 const footerLinks = [
-    { href: "#", label: "Contact" },
-    { href: "#", label: "Privacy Policy" },
-    { href: "#", label: "Terms & Conditions" },
+    { href: "#", label: "Contact", index: 1 },
+    { href: "#", label: "Privacy Policy", index: 2 },
+    { href: "#", label: "Terms & Conditions", index:3 },
 ];
 
 export default function Footer() {
@@ -26,7 +26,7 @@ export default function Footer() {
                             {footerLinks.map((link) => (
                                 <a
                                     href={link.href}
-                                    className="text-white/50 text-sm text-1xl "
+                                    className="text-white/50 text-sm text-1xl " key={link.index}
                                 >
                                     {link.label}
                                 </a>
